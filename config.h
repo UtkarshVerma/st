@@ -406,8 +406,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_C,           clipcopy,        {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,       {.i =  0} },
 	#if ALPHA_PATCH
-	{ TERMMOD,              XK_O,           changealpha,     {.f = +0.05} },
-	{ TERMMOD,              XK_P,           changealpha,     {.f = -0.05} },
+	{ MODKEY,               XK_o,           changealpha,     {.f = -0.05} },
+	{ MODKEY,               XK_p,           changealpha,     {.f = +0.05} },
 	#if ALPHA_FOCUS_HIGHLIGHT_PATCH
 	//{ TERMMOD,              XK_,           changealphaunfocused, {.f = +0.05} },
 	//{ TERMMOD,              XK_,           changealphaunfocused, {.f = -0.05} },
