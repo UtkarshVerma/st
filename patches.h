@@ -216,7 +216,7 @@
  *
  * https://st.suckless.org/patches/keyboard_select/
  */
-#define KEYBOARDSELECT_PATCH 0
+#define KEYBOARDSELECT_PATCH 1
 
 /* This patch adds support for drawing ligatures using the Harfbuzz library to transform
  * original text of a single line to a list of glyphs with ligatures included.
