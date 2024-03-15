@@ -383,9 +383,8 @@ static MouseShortcut mshortcuts[] = {
 #define TERMMOD (ControlMask|ShiftMask)
 
 #if EXTERNALPIPE_PATCH
-static char *copyoutcmd[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
-static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
-static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
+static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler --copy", "externalpipe", NULL };
+static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler --open", "externalpipe", NULL };
 
 #if EXTERNALPIPEIN_PATCH // example command
 static char *setbgcolorcmd[] = { "/bin/sh", "-c",
@@ -439,8 +438,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Return,      newterm,         {.i =  0} },
 	#endif // NEWTERM_PATCH
 	#if EXTERNALPIPE_PATCH
-    { TERMMOD,              XK_O,           externalpipe,    { .v = copyoutcmd } },
-    { MODKEY,               XK_u,           externalpipe,    { .v = copyurlcmd } },
+	{ MODKEY,               XK_u,           externalpipe,    { .v = copyurlcmd } },
 	{ TERMMOD,              XK_U,           externalpipe,    { .v = openurlcmd } },
 	#if EXTERNALPIPEIN_PATCH
 	{ TERMMOD,              XK_M,           externalpipein,  { .v = setbgcolorcmd } },
