@@ -1,2 +1,5 @@
-*.o
-st
+/*.o
+/st
+/.co
+/compile_commands.json
+/.cache
