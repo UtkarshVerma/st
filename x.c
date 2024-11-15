@@ -2253,6 +2253,11 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 
 	#if WIDE_GLYPHS_PATCH
 	if (dmode & DRAW_FG) {
+		r.x = 0;
+		r.y = 0;
+		r.height = win.ch;
+		r.width = win.w;
+		XftDrawSetClipRectangles(xw.draw, 0, winy, &r, 1);
 	#endif // WIDE_GLYPHS_PATCH
 	#if BOXDRAW_PATCH
 	if (base.mode & ATTR_BOXDRAW) {
